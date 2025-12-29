@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mở bằng trình duyệt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .box {
+      max-width: 320px;
+      padding: 24px;
+      border: 2px solid white;
+      border-radius: 18px;
+      box-shadow: 0 0 20px white;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <p>
+      <br>
+      
+    </p>
+
+    <p>
+      👉 Hãy mở bằng <b>Chrome</b>
+    </p>
+
+    <button onclick="openChrome()">
+      MỞ BẰNG TRÌNH DUYỆT
+    </button>
+  </div>
+
+  <script>
+    function openChrome() {
+      // 👉 link trang chính của bạn
+      window.location.href = "https://nammoicuabe.netlify.app/";
+    }
+  </script>
+
+</body>
+</html>
