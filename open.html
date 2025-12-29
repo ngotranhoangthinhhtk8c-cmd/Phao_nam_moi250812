@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Mở bằng trình duyệt</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Mở bằng Chrome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: system-ui, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: system-ui, sans-serif;
+            text-align: center;
+        }
 
-    .box {
-      max-width: 320px;
-      padding: 24px;
-      border: 2px solid white;
-      border-radius: 18px;
-      box-shadow: 0 0 20px white;
-    }
+        .box {
+            padding: 30px;
+            border: 2px solid white;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.8);
+            max-width: 320px;
+        }
 
-    button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      background: white;
-      color: black;
-      font-weight: bold;
-    }
-  </style>
+        h1 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 22px;
+            font-size: 16px;
+            border-radius: 999px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 12px white;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .hint {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
 </head>
+
 <body>
 
-  <div class="box">
-    <p>
-      <br>
-      
-    </p>
+    <div class="box">
+        <h1>🎆 Trải nghiệm đầy đủ 🎆</h1>
+        <p>
+            Messenger không hỗ trợ<br>
+            pháo hoa & âm thanh 😢<br><br>
+            👉 Nhấn nút bên dưới<br>
+            để mở bằng <b>Chrome</b>
+        </p>
 
-    <p>
-      👉 Hãy mở bằng <b>Chrome</b>
-    </p>
+        <button onclick="openChrome()">MỞ BẰNG CHROME</button>
 
-    <button onclick="openChrome()">
-      MỞ BẰNG TRÌNH DUYỆT
-    </button>
-  </div>
+        <div class="hint">
+            (Nếu không có Chrome,<br>
+            máy sẽ hỏi trình duyệt khác)
+        </div>
+    </div>
 
-  <script>
-    function openChrome() {
-      // 👉 link trang chính của bạn
-      window.location.href = "https://nammoicuabe.netlify.app/";
-    }
-  </script>
+    <script>
+        function openChrome() {
+            location.href =
+                "intent://LINK_WEB_CUA_BAN.netlify.app/#Intent;" +
+                "scheme=https;" +
+                "package=com.android.chrome;" +
+                "end;";
+        }
+    </script>
 
 </body>
 </html>
